@@ -28,11 +28,13 @@ public class CustomListTest {
         CustomList list = new CustomList(null, cityList);
         assertEquals(0,list.getCount());
         City city = new City("Winnipeg", "Manitoba");
-        cityList.add(city);
+        list.addCity(city);
         assertEquals(true, list.hasCity(city));
         City city2 = new City("Markham", "Ontario");
         assertEquals(false, list.hasCity(city2));
     }
+
+
 
 
 }
