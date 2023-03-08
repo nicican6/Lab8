@@ -38,13 +38,13 @@ public class CustomListTest {
     @Test
     void testDelete() {
         CustomList list = new CustomList(null, cityList);
-        assertEquals(1, list.getCount());
+        assertEquals(0, list.getCount());
         City city = new City("Toronto", "Ontario");
         list.addCity(city);
-        assertEquals(2, list.getCount());
+        assertEquals(1, list.getCount());
         assertEquals(true, list.hasCity(city));
         list.delete(city);
-        assertEquals(1, list.getCount());
+        assertEquals(0, list.getCount());
         assertEquals(false, list.hasCity(city));
     }
 
