@@ -23,5 +23,16 @@ public class CustomListTest {
         assertEquals(1,list.getCount());
     }
 
+    @Test
+    void testHasCity() {
+        CustomList list = new CustomList(null, cityList);
+        assertEquals(1,list.getCount());
+        City city = new City("Winnipeg", "Manitoba");
+        cityList.add(city);
+        assertEquals(true, list.hasCity(city));
+        City city2 = new City("Markham", "Ontario");
+        assertEquals(false, list.hasCity(city2));
+    }
+
 
 }
